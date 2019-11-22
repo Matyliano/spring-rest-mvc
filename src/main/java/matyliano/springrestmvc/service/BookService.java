@@ -18,7 +18,7 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public Book save ( Book book){
+    public Book save (Book book){
         return bookRepository.save(book);
     }
 
@@ -38,7 +38,7 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    public void delete(Book book){
-        bookRepository.delete(book);
+    public void delete(Long id){
+        bookRepository.deleteById(id);
     }
 }
